@@ -1,0 +1,658 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;400;600&family=Noto+Serif:wght@200;400;600;800&family=Nunito+Sans:opsz,wght@6..12,200;6..12,400;6..12,600&display=swap');
+:root {
+    --red: #990d1d;
+    --gold: #ffc565;
+    --light-grey: #b4b4b4;
+    --grey: #666666;
+}
+
+@font-face {
+    font-family: "Niagato";
+    src: url("assets/fonts/Niagato.ttf"),
+    url("assets/fonts/Niagato.woff"),
+    url("assets/fonts/Niagato.woff2");
+}
+
+html, body {
+    width: 100%;
+    margin: 0;
+    /* Default font */
+    font-family: "Nunito Sans", sans-serif;
+    scroll-behavior: smooth;
+}
+
+h1 {
+    font-family: Niagato;
+    font-size: clamp(3.5rem, 2.413rem + 1.7391vw, 4.5rem);
+    color: var(--red);
+}
+
+.chinese {
+    font-family: "Noto Serif TC";
+    color: var(--gold);
+}
+
+strong {
+    color: var(--red);
+    font-weight: 300;
+}
+
+p {
+    font-weight: 300;
+    font-size: clamp(1.5rem, 0.413rem + 1.7391vw, 2.5rem);
+    text-align: justify;
+}
+
+.icon {
+    width: 50px;
+}
+
+.grey {
+    color: #eee;
+}
+
+/* Nav */
+header {
+    height: 15vh;
+    padding: 0 40px;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+.logo-header {
+    height: 80%;
+}
+
+.header-right {
+    width: 70%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    transition: all 300ms ease;
+}
+
+/* Nav */
+.nav {
+    width: 70%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    list-style: none;
+}
+
+.navitem {
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    width: 100px;
+    height: 50px;
+}
+
+.navitem a {
+    text-decoration: none;
+    color: var(--grey);
+    font-size: 2rem;
+    /* Position */
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translate(-50%);
+    transition: all 200ms ease;
+}
+
+.navitem.selected a, .navitem:hover a {
+    color: var(--red);
+}
+
+.navitem .chinese {
+    color: transparent;
+    transition: all 200ms ease;
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100px;
+    font-size: 2.55rem;
+}
+
+.navitem:hover .chinese, .navitem.selected .chinese {
+    color: var(--gold);
+}
+
+/* Languajes */
+.languajes {
+    width: 80px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+.lang {
+    padding: 7px 5px;
+    border-radius: 5px;
+    width: 20px;
+    border: 2px solid transparent;
+}
+
+.lang.selected, .lang:hover {
+    border: 2px solid var(--red);
+}
+
+/* Collapse Menu */
+.menu-toggle {
+    cursor: pointer;
+    display: none;
+    width: 30px;
+    height: 20px;
+}
+
+.bar {
+    background-color: var(--grey);
+    width: 100%;
+    height: 3px;
+    transition: all 0.5s ease;
+}
+
+/* Collapse Menu Animation Classes */
+.bar.rotate45 {
+    transform: rotate(45deg) translate(0, -10px);
+    height: 6px;
+}
+.bar.rotate-45 {
+    transform: rotate(-45deg) translate(0, 10px);
+    height: 6px;
+}
+.bar.hide {
+    opacity: 0;
+}
+
+/* Hero */
+.hero {
+    /* Background */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    width: 100%;
+    height: 85vh;
+    text-align: center;
+    position: relative;
+
+    /* Flexbox */
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.hero-home {
+    background-image: url(assets/img/hero.jpg);
+}
+
+.hero h1 {
+    color: white;
+    font-size: clamp(4rem, 3.6rem + 1.3333vw, 5.2rem);
+    text-shadow: 2px 2px 2px black;
+}
+.hero a {
+    width: clamp(4.375rem, 3.75rem + 2.0833vw, 6.25rem);
+    aspect-ratio: 1/1;
+    position: absolute;
+    bottom: 20px;
+}
+
+/* Sections */
+section {
+    width: 100%;
+    
+    /* Flexbox */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.section-margin {
+    margin-top: 50px;
+}
+
+.half-section {
+    flex: 1;
+    height: 100%;
+    
+    /* Flexbox */
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+}
+
+.half-section img {
+    width: 100%;
+}
+
+/* Section title */
+.section-title {
+    width: 90%;
+    position: relative;
+}
+
+.section-title img {
+    width: 100px;
+}
+
+.section-title .chinese {
+    position: absolute; 
+    top: -80px;
+    left: 70px;
+}
+
+.section-title .title {
+    position: absolute; 
+    top: -50px;
+    left: 100px;
+    text-shadow: 2px 2px 3px black;
+}
+
+.half-section p {
+    width: 90%;
+    margin: clamp(0.3125rem, -0.7065rem + 1.6304vw, 1.25rem) 0;
+}
+
+/* Happy New Year! */
+.new-year {
+    width: 100%;
+    margin-bottom: 80px;
+}
+
+.new-year .toro {
+    flex: 2;
+    height: clamp(18.75rem, -5.0272rem + 38.0435vw, 40.625rem);
+}
+.new-year .text {
+    flex: 3;
+}
+
+.new-year .text h1 {
+    font-size: clamp(5rem, 2.8261rem + 3.4783vw, 7rem);
+}
+
+.new-year .text p {
+    font-size: clamp(2.4rem, 1.7478rem + 1.0435vw, 3rem);
+    margin-top: -50px;
+}
+
+.new-year .lantern {
+    flex: 1;
+    height: clamp(14.0625rem, -3.9402rem + 28.8043vw, 30.625rem);
+    align-self: flex-start;
+}
+
+/* ---- Gallery ---- */
+.gallery {
+    width: 100%;
+    /* Flexbox */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+}
+
+.gallery-section .section-title {
+    margin-left: 100px;
+}
+
+figure {
+    /* Reset css */
+    margin: 0;
+    
+    flex: 0 0 33.33333333334%;
+    overflow: hidden;
+    /* Position */
+    position: relative;
+}
+
+figure img {
+    width: 100%;
+    /* Posicionamiento de la imagen */
+    object-fit: cover; /* Solo funciona si img tiene tamaño */
+    object-position: center center;
+    display: block; /* Para quitar los 4px entre imagenes*/
+}
+
+figcaption {
+    background-color: rgba(238, 238, 238, 0.6);
+    /* Position */
+    position: absolute;
+    z-index: 999;
+    padding: 0 20px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateY(100%);
+    transition: all 300ms ease-in-out;
+    
+    /* Flexbox */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+/* Subir el caption */
+figure:hover figcaption {
+    transform: translateY(0);
+}
+
+figcaption p {
+    width: 100%;
+    color: var(--red);
+    text-align: left;
+}
+
+/* ---- Footer ---- */
+footer {
+    background-color: var(--red);
+    width: 100%;
+    min-height: 70vh;
+    /* padding: 50px 20px; */
+    box-sizing: border-box;
+    margin-top: 20px;   
+}
+
+/* Footer header */
+.footer-header {
+    width: 100%;
+    /* Flexbox */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: center;
+
+    position: relative;
+}
+
+.footer-header .section-title {
+    margin-top: 50px;
+    width: 700px;
+}
+
+#footer-deco {
+    height: 250px;
+    position: absolute;
+    /* Como centrar con posicionamiento sin estirar la caja */
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.corner-footer {
+    height: 200px;
+}
+
+.corner-footer.abajo {
+    margin-top: -120px;
+}
+
+/* Footer Content */
+.footer-content {
+    margin-top: -40px;
+    /* Flexbox */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: center;
+}
+
+.half-footer {
+    flex: 1;
+    height: 50vh;
+    /* Flexbox */
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+}
+
+.half-footer li {
+    color: var(--light-grey);
+    font-size: 2.5rem;
+    list-style-type: none;
+    margin: 10px 0;
+    width: 400px;
+}
+
+/* Icons */
+.half-footer li::before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    display: block;
+    position: relative;
+    top: 55px;
+    left: -55px;
+    /* Background */
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.phone::before {
+    background-image: url(assets/icons/phone.svg);
+}
+.email::before {
+    background-image: url(assets/icons/email.svg);
+}
+.twitter::before {
+    background-image: url(assets/icons/twitter.svg);
+}
+.instagram::before {
+    background-image: url(assets/icons/instagram.svg);
+}
+
+/* Footer nav */
+.footer-menuitem {
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    width: 100px;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.footer-menuitem a {
+    text-decoration: none;
+    color: var(--light-grey);
+    font-size: 2.5rem;
+    /* Position */
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translate(-50%);
+    transition: all 200ms ease;
+}
+
+.footer-menuitem.selected a, .footer-menuitem:hover a {
+    color: white;
+}
+
+.footer-menuitem .chinese {
+    color: transparent;
+    transition: all 200ms ease;
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100px;
+    font-size: 2.55rem;
+}
+
+.footer-menuitem:hover .chinese, .footer-menuitem.selected .chinese {
+    /* color: var(--gold); */
+    color: #c39852;
+    /* color: #e6495c; */
+}
+
+/* ---- Media Queries ---- */
+@media screen and (max-width: 1000px){
+    /* Flex-flow row to column */
+    section {
+        flex-flow: column nowrap;
+    }
+
+    h1 {
+        font-size: clamp(3.5rem, 2.5769rem + 3.0769vw, 4.5rem);
+    }
+
+    p {
+        font-size: clamp(1.5rem, 0.5769rem + 3.0769vw, 2.5rem);
+    }
+
+    .half-section {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    /* New Year */
+    .new-year .toro {
+        flex: 2 1 500px;
+        height: 500px;
+    }
+
+    .new-year .text {
+        width: 90%;
+    }
+
+    .lantern, #footer-deco {
+        display: none;
+    }
+
+    /* Gallery */
+    figure {
+        flex: 1 0 50%;
+    }
+
+    /* Collapse Menu */
+    .menu-toggle {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+        height: 20px;
+    }
+    
+    .header-right {
+        display: none;
+        flex-flow: column nowrap;
+        background-color: white;
+        text-align: center;
+        
+        position: absolute;
+        top: 15vh; /* Espacio entre el borde superior y el comienzo del nav */
+        right: 0;
+        width: 100%;
+        height: 45vh;
+        z-index: 999;
+        overflow: hidden;
+    }
+
+    .nav {
+        flex-flow: column nowrap;
+        width: 100%;
+        padding: 0;
+    }
+
+    .languajes {
+        margin-bottom: 20px;
+    }
+
+    .nav li {
+        padding: .6rem 0;
+    }
+    
+    .show {
+        display: flex;
+        animation: curtain 2s;
+        animation-fill-mode: forwards;
+    }
+
+    /* Footer */
+    footer {
+        /* Flex Box */
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: flex-end;
+        align-content: center;
+    }
+
+    .footer-content{
+        width: 90%;
+    }
+
+    .corner-footer {
+        width: clamp(6.25rem, 0rem + 20vw, 12.5rem);
+    }
+
+    .corner-footer.abajo {
+        align-self: flex-start;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .half-footer.right {
+        display: none;
+    }
+
+    /* Footer Title */
+    .footer-header .section-title .chinese {
+        left: 0;
+    }
+    .title.grey {
+        left: 30px;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 500px) {
+    /* Gallery */
+    figure {
+        flex: 1 0 100%;
+    }
+}
+    
+/* Animations */
+@keyframes curtain {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 45vh;
+    }
+}
+@keyframes curtain-up {
+    0% {
+        height: 45vh;
+    }
+    100% {
+        height: 0;
+    }
+}

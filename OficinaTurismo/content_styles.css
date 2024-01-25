@@ -1,0 +1,463 @@
+body {
+    overflow-x: hidden;
+}
+
+/* Se ha roto por dios sabe que */
+.navitem .chinese, .footer-menuitem .chinese {
+    top: -5px;
+}
+
+.travel-section .section-title h1 {
+    font-size: clamp(4.5rem, 3.413rem + 1.7391vw, 5.5rem);
+}
+
+/* Hero */
+.hero {
+    justify-content: flex-end;
+    height: 60vh;
+}
+
+.hero-travel {
+    background-image: url(assets/img/travel_hero.jpg);
+}
+.hero-routes {
+    background-image: url(assets/img/routes_hero.jpg);
+}
+.hero-contact {
+    background-image: url(assets/img/contact_hero1.jpg);
+}
+
+/* ---- Travel section ---- */
+.travel-section {
+    margin-top: 20px;
+}
+
+/* Header */
+.travel-section-header {
+    width: 100%;
+    overflow: hidden;
+    /* Flex Box */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    align-content: center;
+}
+
+.section-title {
+    margin-bottom: clamp(0rem, -2.7174rem + 4.3478vw, 2.5rem);
+}
+
+#title-plane {
+    width: 350px;
+}
+#title-train {
+    width: 250px;
+}
+#title-hotels {
+    width: 300px;
+}
+
+/* Gallery */
+.gallery-logo {
+    padding: 40px clamp(3.75rem, -2.3641rem + 9.7826vw, 9.375rem);;
+    box-sizing: border-box;
+}
+
+/* Tips */
+.tips-section {
+    padding: 60px;
+    box-sizing: border-box;
+}
+
+.tips-header {
+    height: 100px;
+    background-color: var(--red);
+    border: 2px solid black;
+
+    /* Flex Box */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+
+h2 {
+    font-size: clamp(2.5rem, 1.413rem + 1.7391vw, 3.5rem);
+    color: var(--gold);
+    font-family: "Noto Serif", serif;
+    font-weight: 600;
+    letter-spacing: clamp(0.1rem, -0.4435rem + 0.8696vw, 0.6rem);
+    text-align: center;
+}
+
+.tips-header img {
+    height: 90px;
+}
+
+.tips-content {
+    min-height: 60vh;
+    /* Flex Box */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: center;
+}
+
+.tip {
+    flex: 1;
+    height: 100%;
+    border: 2px solid black;
+    padding: 20px;
+}
+
+h3 {
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 600;
+    font-size: clamp(2rem, 1.2391rem + 1.2174vw, 2.7rem);
+    margin: 0;
+}
+
+.tip p {
+    margin: 0;
+    margin-top: 15px;
+    font-size: clamp(1.58rem, 0.7974rem + 1.2522vw, 2.3rem);
+}
+
+/* ---- Contact ---- */
+form {
+    /* Flex Box */
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+.form-row {
+    width: 90%;
+    /* Flex Box */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+.form-row:first-child {
+    justify-content: flex-start;
+    padding-top: 40px;
+}
+.form-row:last-child {
+    justify-content: flex-end;
+}
+
+input[type=text], textarea {
+    margin: 30px 0;
+    /* Reset CSS */
+    background-color: transparent;
+    border: none;
+    outline: none;
+    transition: all 100ms ease;
+    /* Font */
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 2.5rem;
+}
+
+input[type=text] {
+    width: 45%;
+    border-bottom: 4px solid var(--red);
+}
+input[type=text]:focus {
+    border-bottom: 4px solid var(--gold);
+}
+
+textarea {
+    border: 4px solid var(--red);
+    width: 100%;
+    height: 20vh;
+}
+textarea:focus {
+    border: 4px solid var(--gold);
+}
+
+/* Boton */
+.button {
+    position: relative;
+    width: 300px;
+    height: 100px;
+}
+
+input[type=submit] {
+    padding: 20px;
+    width: 300px;
+    height: 100px;
+    background-color: var(--red);
+    color: var(--gold);
+    font-size: 2.8rem;
+    border: none;
+    border-radius: 10px;
+    transition: 400ms;
+    cursor: pointer;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+input[type=submit]:hover {
+    background-color: transparent;
+    color: var(--red);
+    box-shadow: inset 0 0 2px 1px rgba(120,120,120,1);
+}
+
+.button .chinese {
+    color: rgba(120,120,120,.4);
+    width: 200px;
+    text-align: center;
+    position: absolute;
+    top: -50px;
+    left: 50px;
+}
+
+/* Oficinas */
+.office-section {
+    margin-bottom: 100px;
+    /* Flex Box */
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: center;
+}
+
+.office-section .section-title {
+    margin-left: 100px;
+}
+.office-section .section-title h1 {
+    width: 600px;
+}
+
+iframe {
+    width: 100%;
+    height: 50vh;
+    border-top: 4px solid var(--red);
+    border-bottom: 4px solid var(--red);
+}
+
+.office-content {
+    width: 100%;
+    height: 40vh;
+    /* Flex Box */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: center;
+}
+
+.office-content img {
+    height: 40vh;
+    margin: 0 20px;
+}
+
+/* Office data */
+.office-data {
+    height: 35vh;
+    margin-top: 20px;
+    /* Flex Box */
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+
+.office-data p {
+    color: var(--red);
+    font-weight: 600;
+    width: 100%;
+    font-size: clamp(2rem, 1.4565rem + 0.8696vw, 2.5rem);
+    text-align: left;
+}
+
+.office-data p:before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    display: block;
+    position: relative;
+    top: 55px;
+    left: -55px;
+    /* Background */
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.location::before {
+    background-image: url(assets/icons/location.svg);
+}
+.email::before {
+    background-image: url(assets/icons/email_borde.svg);
+}
+.phone::before {
+    background-image: url(assets/icons/phone_borde.svg);
+}
+
+/* ---- Routes ---- */
+.routes-section {
+    margin-bottom: 50px;
+}
+
+.routes-section .gallery .gallery-item {
+    flex: 0 0 50%;
+    height: 55vh;
+}
+
+.route-text {
+    flex: 0 0 50%;
+    background-color: var(--red);
+    height: 100%;
+    height: 55vh;
+    padding: 50px;
+    box-sizing: border-box;
+    /* Flex Box */
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: center;
+}
+
+.route-text h2 {
+    font-size: 5rem;
+    text-align: left;
+    font-family: Niagato;
+    margin: 0;
+}
+
+.route-text p {
+    color: white;
+    font-size: 2.5rem;
+    margin: 0;
+    margin-top: 10px;
+}
+
+.route-text .days {
+    font-size: 3.8rem;
+}
+
+/* ---- Animations ---- */
+/* Scroll animation (dragons) */
+.dragon {
+    width: 30%;
+}
+
+.dragon-right.reveal {
+    transform: translateX(150px) scaleX(-1);
+}
+.dragon-left.reveal {
+    transform: translateX(-150px);
+}
+.reveal{
+    position: relative;
+    opacity: 0;
+    transition: 1s all ease;
+}
+    
+.dragon-right.reveal.active{
+    transform: translateX(0) scaleX(-1);
+    opacity: 1;
+}
+.dragon-left.reveal.active{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1780px){
+    .routes-section .gallery .gallery-item img {
+        height: 100%;
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .dragon-left {
+        display: none;  
+    }
+
+    .dragon-right {
+        width: 50%;
+    }
+
+    .section-title {
+        margin-bottom: clamp(0rem, -2.3077rem + 7.6923vw, 2.5rem);
+        margin-left: 40px;
+    }
+
+    /* Form */
+    .form-row {
+        flex-flow: column nowrap;
+    }
+    
+    input[type=text] {
+        width: 100%;
+    }
+
+    .form-row:last-child {
+        margin-bottom: 60px;
+    }
+
+    /* Offices */
+    .office-data {
+        width: 60%;
+    }
+
+    .office-content img {
+        width: 10%;
+        min-width: 50px;
+        height: auto;
+    }
+
+    /* Tips */
+    .tips-content {
+        flex-flow: column nowrap;
+    }
+
+    .tip {
+        border: 2px solid black;
+        border-bottom: none;
+    }
+    .tip:last-child {
+        border-bottom: 2px solid black;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .dragon-right, .office-content img {
+        display: none;
+    }
+
+    .office-section .section-title {
+        margin-left: 10px;
+    }
+
+    /* Tips */
+    .tips-section {
+        padding: 0;
+    }
+
+    .tips {
+        width: 100%;
+    }
+
+    .tips-header {
+        padding: 20px;
+    }
+
+    .tips-header img {
+        display: none;
+    }
+}
