@@ -97,7 +97,7 @@ h2 {
 }
 
 .tips-content {
-    min-height: 60vh;
+    min-height: 40vh;
     /* Flex Box */
     display: flex;
     flex-flow: row nowrap;
@@ -116,14 +116,14 @@ h2 {
 h3 {
     font-family: "Nunito Sans", sans-serif;
     font-weight: 600;
-    font-size: clamp(2rem, 1.2391rem + 1.2174vw, 2.7rem);
+    font-size: clamp(1.8rem, 1.5rem + 1.6vw, 2.2rem);
     margin: 0;
 }
 
 .tip p {
     margin: 0;
     margin-top: 15px;
-    font-size: clamp(1.58rem, 0.7974rem + 1.2522vw, 2.3rem);
+    font-size: clamp(1.2rem, 0.9353rem + 0.4706vw, 1.5rem);
 }
 
 /* ---- Contact ---- */
@@ -162,7 +162,7 @@ input[type=text], textarea {
     transition: all 100ms ease;
     /* Font */
     font-family: "Nunito Sans", sans-serif;
-    font-size: 2.5rem;
+    font-size: clamp(1.5rem, 0.9353rem + 0.4706vw, 1.8rem);
 }
 
 input[type=text] {
@@ -195,7 +195,7 @@ input[type=submit] {
     height: 100px;
     background-color: var(--red);
     color: var(--gold);
-    font-size: 2.8rem;
+    font-size: 2.3rem;
     border: none;
     border-radius: 10px;
     transition: 400ms;
@@ -375,6 +375,36 @@ iframe {
     opacity: 1;
 }
 
+/* Timelines */
+.timeline {
+    width: 100%;
+    padding: 2rem 4rem;
+    box-sizing: border-box;
+}
+
+.timeline .destinies {
+    width: 100%;
+    padding: 0 1.5rem;
+    box-sizing: border-box;
+    /* Flex Box */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+.destiny {
+    color: var(--red);
+    font-size: 2rem;
+    /* Flex Box */
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
 /* Media Queries */
 @media screen and (max-width: 1780px){
     .routes-section .gallery .gallery-item img {
@@ -432,6 +462,64 @@ iframe {
     }
     .tip:last-child {
         border-bottom: 2px solid black;
+    }
+
+    /* Fix Routes */
+    .routes-section .gallery .gallery-item, .route-text {
+        flex: 0 0 100%;
+        height: unset;
+    }
+
+    .routes-section .gallery .gallery-item img {
+        width: 100%;
+        height: unset;
+    }
+
+    .timeline .destinies {
+        padding: 0;
+    }
+    .destiny {
+        font-size: clamp(1.5rem, 1.1rem + 1.28vw, 1.9rem);
+    }
+
+}
+
+@media screen and (max-width: 750px){
+    .timeline {
+        /* Flex Box */
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .timeline img {
+        display: none;
+    }
+
+    .timeline .destinies {
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+
+    .destiny {
+        width: 30%;
+        margin-left: 50px;
+        margin-top: 1rem;
+        flex-flow: column nowrap;
+        align-items: flex-start;
+        position: relative;
+    }
+
+    .destiny::before {
+        content: "";
+        height: 50px;
+        width: 50px;
+        background-image: url(assets/designs/timeline_1.svg);
+        position: absolute;
+        top: 10px;
+        left: -60px;
     }
 }
 

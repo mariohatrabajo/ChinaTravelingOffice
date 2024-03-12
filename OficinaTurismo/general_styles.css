@@ -23,7 +23,7 @@ html, body {
 
 h1 {
     font-family: Niagato;
-    font-size: clamp(3.5rem, 2.413rem + 1.7391vw, 4.5rem);
+    font-size: 3.5rem;
     color: var(--red);
 }
 
@@ -39,7 +39,7 @@ strong {
 
 p {
     font-weight: 300;
-    font-size: clamp(1.5rem, 0.413rem + 1.7391vw, 2.5rem);
+    font-size: clamp(1.2rem, 0.9353rem + 0.4706vw, 1.5rem);
     text-align: justify;
 }
 
@@ -251,19 +251,19 @@ section {
 }
 
 .section-title img {
-    width: 100px;
+    width: 80px;
 }
 
 .section-title .chinese {
     position: absolute; 
     top: -80px;
-    left: 70px;
+    left: 50px;
 }
 
 .section-title .title {
     position: absolute; 
     top: -50px;
-    left: 100px;
+    left: 80px;
     text-shadow: 2px 2px 3px black;
 }
 
@@ -287,11 +287,11 @@ section {
 }
 
 .new-year .text h1 {
-    font-size: clamp(5rem, 2.8261rem + 3.4783vw, 7rem);
+    font-size: 5rem;
 }
 
 .new-year .text p {
-    font-size: clamp(2.4rem, 1.7478rem + 1.0435vw, 3rem);
+    font-size: 2.4rem;
     margin-top: -50px;
 }
 
@@ -518,7 +518,7 @@ footer {
     }
 
     h1 {
-        font-size: clamp(3.5rem, 2.5769rem + 3.0769vw, 4.5rem);
+        font-size: clamp(2.8rem, 2.371rem + 1.8065vw, 3.5rem);
     }
 
     p {
@@ -528,6 +528,11 @@ footer {
     .half-section {
         width: 100%;
         margin: 20px 0;
+    }
+
+    .section-title {
+        width: 90%;
+        margin-left: -10px;
     }
 
     /* New Year */
@@ -547,6 +552,10 @@ footer {
     /* Gallery */
     figure {
         flex: 1 0 50%;
+    }
+
+    .gallery-section .section-title {
+        margin-left: unset;
     }
 
     /* Collapse Menu */
@@ -622,6 +631,19 @@ footer {
         display: none;
     }
 
+    .hero h1 {
+        font-size: 3rem;
+        padding: 0 1rem;
+    }
+
+    .new-year .text h1 {
+        font-size: clamp(2.8rem, 2.371rem + 1.8065vw, 3.5rem);
+        margin-bottom: 4rem;
+    }
+    .new-year .text p {
+        font-size: clamp(1.5rem, 0.5769rem + 3.0769vw, 2.5rem);
+    }
+
     /* Footer Title */
     .footer-header .section-title .chinese {
         left: 0;
@@ -633,9 +655,31 @@ footer {
 
 /* Mobile */
 @media screen and (max-width: 500px) {
+
+    /* .section-title {
+        width: 70%;
+    } */
+
     /* Gallery */
     figure {
         flex: 1 0 100%;
+    }
+
+    .new-year .toro {
+        height: auto;
+        width: 90%;
+    }
+
+    .half-footer li {
+        width: 95%;
+        font-size: 2rem;
+        margin-left: 1rem;
+    }
+    .half-footer li::before {
+        width: 40px;
+        height: 40px;
+        left: -45px;
+        top: 40px;
     }
 }
     
